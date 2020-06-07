@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_dark"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -21,7 +20,6 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/collapsed_title_style"
-            app:contentScrim="?attr/colorPrimary"
             app:expandedTitleTextAppearance="@style/expanded_title_style"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:title="Hello world"
@@ -35,37 +33,42 @@
                 android:src="@drawable/material_flat"
                 app:layout_collapseMode="parallax" />
 
-<!--            <androidx.appcompat.widget.Toolbar-->
-<!--                android:id="@+id/toolbar"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="?attr/actionBarSize"-->
-<!--                android:layout_gravity="bottom"-->
-<!--                android:background="?attr/colorPrimary"-->
-<!--                app:layout_collapseMode="pin"-->
-<!--                app:titleTextAppearance="@style/collapsed_title_style" />-->
+            <View
+                android:id="@+id/corneredView"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/cornered_background" />
+
+
+
+            <!--            <androidx.appcompat.widget.Toolbar-->
+            <!--                android:id="@+id/toolbar"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="?attr/actionBarSize"-->
+            <!--                android:layout_gravity="bottom"-->
+            <!--                android:background="?attr/colorPrimary"-->
+            <!--                app:layout_collapseMode="pin"-->
+            <!--                app:titleTextAppearance="@style/collapsed_title_style" />-->
 
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <androidx.core.widget.NestedScrollView
-        android:background="@android:color/holo_green_dark"
         android:layout_width="match_parent"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
         android:layout_height="match_parent"
-        app:behavior_overlapTop="48dp"
+        android:overScrollMode="ifContentScrolls"
+        app:behavior_overlapTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <TextView
-            android:background="@drawable/cornered_background"
             android:id="@+id/infoTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
             android:lineHeight="24sp"
             android:text="@string/lorem"
             android:textSize="16sp" />

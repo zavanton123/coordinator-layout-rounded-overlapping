@@ -5,16 +5,10 @@
     >
 
     <corners
-        android:topLeftRadius="32dp"
-        android:topRightRadius="32dp"
+        android:topLeftRadius="48dp"
+        android:topRightRadius="48dp"
         />
 
-    <solid android:color="@android:color/holo_blue_bright" />
-
-    <padding
-        android:left="32dp"
-        android:right="32dp"
-        android:top="24dp"
-        />
+    <solid android:color="@color/white" />
 
 </shape>
