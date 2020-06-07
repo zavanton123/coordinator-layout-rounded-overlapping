@@ -42,7 +42,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="100dp"
         android:layout_gravity="bottom"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
@@ -51,7 +51,27 @@
         app:layout_anchorGravity="bottom"
         app:layout_collapseMode="pin"
         style="@style/ToolBarWithNavigationBack"
-        />
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Title"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
